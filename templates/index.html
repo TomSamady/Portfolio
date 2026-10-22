@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tom Samady | Portfolio</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <nav class="navbar" aria-label="Main navigation">
+        <a class="nav-name" href="#top">TS<span>.</span></a>
+
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <header id="top">
+        <h1>Tom Samady</h1>
+        <p>Second-Year Computer Science Student at the University of Surrey</p>
+
+        <div class="contact-details" id="contact">
+            <!-- Replace the phone number in both places below. -->
+            <a class="contact-item" href="tel:+44YOURNUMBER">
+                <span class="contact-icon phone-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59
+                        6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37
+                        2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1
+                        0 0 1-1 1C10.61 21 3 13.39 3 4a1 1
+                        0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2
+                        2.45.57 3.57a1 1 0 0 1-.25 1.02z" />
+                    </svg>
+                </span>
+
+                <span>+44 7543701711</span>
+            </a>
+
+            <!-- Replace the email address in both places below. -->
+            <a class="contact-item" href="mailto:YOUR_EMAIL">
+                <span class="contact-icon mail-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="3" y="5" width="18" height="14" rx="2" />
+                        <path d="m3 6 9 7 9-7" />
+                    </svg>
+                </span>
+
+                <span>tomsamady@icloud.com</span>
+            </a>
+        </div>
+
+        <div class="header-actions">
+            <div class="social-links">
+                <a class="social-button linkedin"
+                   href="https://www.linkedin.com/in/tomsamady123"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Visit my LinkedIn profile"
+                   title="LinkedIn">
+
+                    <svg viewBox="0 0 16 16" aria-hidden="true">
+                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474
+                        0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175
+                        1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943
+                        12.248V6.169H2.542v7.225h2.401zM3.743 5.182c.837
+                        0 1.358-.554 1.358-1.248-.015-.709-.521-1.248-1.342-1.248
+                        S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327
+                        1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173
+                        -.431.568-.878 1.232-.878.869 0 1.216.662 1.216
+                        1.633v3.866h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252
+                        -1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169
+                        h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                    </svg>
+                </a>
+
+                <a class="social-button github"
+                   href="https://github.com/TomSamady"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Visit my GitHub profile"
+                   title="GitHub">
+
+                    <svg viewBox="0 0 16 16" aria-hidden="true">
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53
+                        5.47 7.59.4.07.55-.17.55-.38
+                        0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94
+                        -.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
+                        -.01-.53.63-.01 1.08.58 1.23.82.72 1.21
+                        1.87.87 2.33.66.07-.52.28-.87.51-1.07
+                        -1.78-.2-3.64-.89-3.64-3.95
+                        0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08
+                        -2.12 0 0 .67-.21 2.2.82a7.65 7.65 0 0 1
+                        2-.27c.68 0 1.36.09 2 .27 1.53-1.04
+                        2.2-.82 2.2-.82.44 1.1.16 1.92.08
+                        2.12.51.56.82 1.27.82 2.15
+                        0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54
+                        1.48 0 1.07-.01 1.93-.01 2.2
+                        0 .21.15.46.55.38A8.01 8.01 0 0 0 16
+                        8c0-4.42-3.58-8-8-8" />
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Save your PDF as static/Thomas-Samady-CV.pdf. -->
+            <a class="cv-button"
+               href="{{ url_for('static', filename='Thomas-Samady-CV.pdf') }}"
+               download>
+                Download CV ↓
+            </a>
+        </div>
+    </header>
+
+    <section class="about-me" id="about" aria-labelledby="about-heading">
+        <h2 id="about-heading">About Me</h2>
+
+        <p>
+            I'm Tom, a second-year BSc Computer Science student at
+            the University of Surrey. I enjoy turning ideas into
+            practical software and understanding how the systems
+            behind everyday applications work.
+        </p>
+
+        <p>
+            My interest in programming began with Java at school,
+            where I created games such as Pong and Snake.
+            Since then, I've developed projects ranging from a
+            desktop recipe manager to a CPU scheduling simulator,
+            a REST API and a deployed URL shortener.
+            My experience includes Java, Python, SQL, Swing
+            and Spring Boot.
+        </p>
+
+        <p>
+            During an IT Technician internship at CNM Estates,
+            I gained practical experience supporting office
+            technology, improving website features and working
+            with an intranet and Microsoft Access.
+            This helped me connect my technical interests
+            with the needs of people using technology at work.
+        </p>
+
+        <p>
+            Before university, I completed the International
+            Baccalaureate, studying Computer Science,
+            Business Management and Economics at Higher Level.
+            These subjects developed my interest in both
+            building software and understanding the problems
+            it can help people and organisations solve.
+        </p>
+
+        <p>
+            I'm continuing to develop my skills through university
+            coursework and independent projects, with a focus on
+            building useful applications and becoming a more
+            thoughtful, capable developer.
+        </p>
+    </section>
+
+    <section class="skills-section"
+             id="skills"
+             aria-labelledby="skills-heading">
+
+        <h2 id="skills-heading">Technical Skills</h2>
+
+        <p class="skills-intro">
+            Technologies and concepts I've used through university
+            coursework and personal projects.
+        </p>
+
+        <div class="skills-grid">
+            <article class="skill-group">
+                <h3>Languages</h3>
+
+                <ul class="skill-tags">
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>SQL</li>
+                    <li>Haskell</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                </ul>
+            </article>
+
+            <article class="skill-group">
+                <h3>Frameworks &amp; Libraries</h3>
+
+                <ul class="skill-tags">
+                    <li>Spring Boot</li>
+                    <li>Javalin</li>
+                    <li>Flask</li>
+                    <li>Java Swing</li>
+                    <li>NumPy</li>
+                </ul>
+            </article>
+
+            <article class="skill-group">
+                <h3>Programming Concepts</h3>
+
+                <ul class="skill-tags">
+                    <li>Object-Oriented Programming</li>
+                    <li>Functional Programming</li>
+                    <li>Recursion</li>
+                    <li>Data Structures</li>
+                    <li>Algorithms</li>
+                    <li>Exception Handling</li>
+                </ul>
+            </article>
+
+            <article class="skill-group">
+                <h3>Backend &amp; Data</h3>
+
+                <ul class="skill-tags">
+                    <li>REST APIs</li>
+                    <li>SQLite</li>
+                    <li>Relational Database Design</li>
+                    <li>DAO Pattern</li>
+                    <li>File Handling</li>
+                    <li>Serialization</li>
+                </ul>
+            </article>
+
+            <article class="skill-group">
+                <h3>Systems &amp; Testing</h3>
+
+                <ul class="skill-tags">
+                    <li>Multithreading</li>
+                    <li>Synchronisation</li>
+                    <li>Process Scheduling</li>
+                    <li>Unit Testing</li>
+                    <li>Integration Testing</li>
+                    <li>Debugging</li>
+                </ul>
+            </article>
+
+            <article class="skill-group">
+                <h3>Development Tools</h3>
+
+                <ul class="skill-tags">
+                    <li>Git</li>
+                    <li>GitHub</li>
+                    <li>GitLab</li>
+                    <li>Visual Studio Code</li>
+                    <li>Docker</li>
+                    <li>Railway</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <main id="projects">
+        <h2>My Projects</h2>
+
+        <div class="project-grid">
+            <article class="project-card">
+                <h3>CPU Scheduling Simulator</h3>
+
+                <p>
+                    Developed a simplified operating system scheduler in Java,
+                    implementing First-Come, First-Served, Round Robin and
+                    non-preemptive priority scheduling.
+                </p>
+
+                <p>
+                    Used Java threads, process control blocks and synchronised
+                    queues to manage processes represented by Python scripts.
+                    Tracked execution times, context switches and completion
+                    order through event logging.
+                </p>
+
+                <p>
+                    <strong>Grade: 100% · First-year university project</strong>
+                </p>
+
+                <p>Java · Python · Multithreading · Operating Systems</p>
+
+                <span>
+                    Source code unavailable due to university coursework restrictions.
+                </span>
+            </article>
+
+            <article class="project-card">
+                <h3>GameFinder REST API</h3>
+
+                <p>
+                    Extended a Java REST API built with Javalin and SQLite
+                    to work with video game and developer data.
+                    Completed as individual coursework during my first
+                    year at the University of Surrey.
+                </p>
+
+                <p>
+                    <strong>Grade: 70% · First-year university project</strong>
+                </p>
+
+                <p>Java · Javalin · SQLite · REST API</p>
+
+                <span>
+                    Source code unavailable due to university coursework restrictions.
+                </span>
+            </article>
+
+            <a class="project-card"
+               href="https://short-links.up.railway.app"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <h3>URL Shortener</h3>
+
+                <p>
+                    Built and deployed a URL shortening application using
+                    Java and Spring Boot. Users can create shortened links
+                    that redirect to their original destinations.
+                </p>
+
+                <p>
+                    Developed practical experience in backend development,
+                    database configuration and cloud deployment through Railway.
+                </p>
+
+                <p><strong>Personal Project</strong></p>
+
+                <p>Java · Spring Boot · Railway</p>
+
+                <span>Try the live application ↗</span>
+            </a>
+        </div>
+    </main>
+</body>
+</html>
